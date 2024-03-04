@@ -41,8 +41,7 @@ def clean_countries(affiliations):
 
     affiliations = affiliations.copy()
     affiliations["countries"] = affiliations["countries"].str.replace(
-        "United States", "United States of America"
-    )
+        "United States", "United States of America")
     return affiliations
 
 def count_country_frequency(affiliations):
@@ -72,6 +71,7 @@ def plot_world_map(countries):
     ).add_to(m)
 
     m.save("map.html")
+
 def main():
     """Función principal"""
     affiliations = load_affiliations()
